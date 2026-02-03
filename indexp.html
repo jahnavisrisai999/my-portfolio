@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MY PORTFOLIO</title>
+        <style>
+            body{
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                line-height: 1.6;
+                text-align: center;
+            }
+            .hero {
+                background: white;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .project-card {
+               background: pink;
+               margin: 20px auto;
+               padding: 20px;
+               max-width: 500px;
+               border-radius: 10px;
+               box-shadow: 0 4px 10px violet;
+            }
+            form {
+                max-width: 400px;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+            }
+            form input, form textarea, form button {
+                margin: 10px 0;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid gray;
+            }
+            form button {
+                background: violet;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            form button:hover {
+                background: rgb(214, 11, 130);
+            }
+            
+             header{
+                    background: url("https://picsum.photos/1100/200")  no-repeat center/cover;
+                    text-align: center;
+                    padding: 90px 20px;
+                    color: white; 
+                    position: relative;
+                }
+                header h1{
+                    position: relative;
+                    z-index: 1;
+                }
+                header::after {
+                    left: 0;
+                    right: 0;
+                    background-color: rgb(6, 7, 7);
+                    bottom: 0;
+                }
+                header h1{
+                    font-size: 3em;
+                    animation: fadeInDown 1s ease forwards;
+                    margin: bottom 15px;
+                }
+                @keyframes fadeInDown{
+                    from{
+                        opacity: 0;
+                        transform: translateY(-20px);
+                    }
+                    to{
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                @keyframes fadeInUp{
+                    from{
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to{
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                nav{
+                    background: black;
+                    justify-content: center;
+                    display: flex;
+                    gap: 30px;
+                    padding: 12px;
+                    position: sticky;
+                    top: 0;
+                    z-index: 10;
+                }
+                nav a{
+                    color: white;
+                    text-decoration: none;
+                    font-weight: 500;
+                    transition: 0.3s;
+                    position: relative;
+                }
+                nav a::after{
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    background: white;
+                    left: 0;
+                    bottom: -5px;
+                    transition: width 0.3s;
+                }
+                nav a:hover::after{
+                    width: 100%;
+                    
+                }
+                nav a:hover{
+                    color: blueviolet;
+                }
+                #home {
+                    background: linear-gradient(135deg,violet,white);
+                    padding: 60px 30px;
+                    border-radius: 12px;
+                    text-align: center;
+                    margin-top: 20px;
+                    box-shadow: 0 4px 12px violet;
+                }
+                #home h2{
+                    margin-bottom: 20px;
+                    font-size: 2.2rem;
+                    animation: fadeInUp 1s ease forwards;
+                    color: blueviolet;
+                }
+            
+           </style>
+            
+            
+
+        
+    </head>
+    <body>
+        
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About Me</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+  <header>
+    <h1>Hello I'm Jahnavi 👩‍💻</h1>
+    <p>✨Tech Learner | Web Developer | Designer✨</p>
+    <p>Welcome to my personal portfolio showcasing my skills and Projects </p>
+  </header>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am currently pursuing B.Tech 2nd Year and actively learning Web Development, Data Science, Generative AI Basics</p>
+  <h3><u>Skills</u></h3>
+  <ul>
+    <li>HTML, CSS, JavaScript, React</li>
+    <li>MongoDB, Deployment Workflows</li>
+    <li>Design Thinking and Innovation</li>
+  </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <ul>  
+    <h3>Portfolio Website</h3>
+    <p>A responsive personal portfolio built with HTML,CSS and Java Script</p>
+    </div>
+    <div class="project-card">
+    <h3>Interactive Game</h3>
+    <p>A fun browser-based game using Java Script and React</p>
+    </div>
+    </ul>
+    </section>
+        
+        
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+             
+        <input type="text" placeholder="Your Name" required><br><br>
+        <input type="email" placeholder="Your Email" required><br><br>
+        <input type="text"   placeholder="Your Message" required><br><br>   
+        <button type="submit">Send</button>
+        </form>
+        <div id="success-message" style="display: none; color: green; margin-top: 15px; font-weight: bold;">
+            ✅ Thankyou! Your message has been sent successfully.
+        </div>
+        <p><b>or reach me at: <a href="mailto: jahnavisrisait@gmail.com">jahnavisrisait@gmail.com</a></p>
+        </section>
+            <script src="script.js"></script>
+        
+        
+    </body>
+
+</html>
